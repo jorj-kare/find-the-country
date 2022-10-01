@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/js/index.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/main.css" />
+    <title>Find the country</title>
+  </head>
+
+  <body>
+    <button class="btn-audio">🔊</button>
+    <div class="menu">
+      <!-- <h1 class="menu__title">Select a continent to start the game!</h1> -->
+      <div class="menu__btn-box">
+        <button
+          class="menu__btn"
+          type="button"
+          value="Africa"
+          data-zoom="2"
+          data-coords="26.17, 5.65"
+        >
+          Africa
+        </button>
+        <button
+          class="menu__btn"
+          type="button"
+          value="Asia"
+          data-zoom="2"
+          data-coords="85.0720229, 27.0837562"
+        >
+          Asia
+        </button>
+        <button
+          class="menu__btn"
+          type="button"
+          value="Europe"
+          data-zoom="3"
+          data-coords="6.542983, 46.4598674"
+        >
+          Europe
+        </button>
+        <button
+          class="menu__btn"
+          type="button"
+          value="Oceania"
+          data-zoom="2"
+          data-coords="174.8335298, -15.2716208"
+        >
+          Oceania
+        </button>
+        <button
+          class="menu__btn"
+          type="button"
+          value="South_America"
+          data-zoom="2"
+          data-coords="-57.383586, -18.024358"
+        >
+          South America
+        </button>
+        <button
+          class="menu__btn"
+          type="button"
+          value="North_America"
+          data-zoom="2"
+          data-coords="-106.8691266, 46.3128821"
+        >
+          North America
+        </button>
+        <!-- <button class="menu__btn" type="button" value="All">All <br />
+              Continents</button> -->
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="wrapper">
+        <p class="info__text"></p>
+        <span class="info__timer"></span>
+      </div>
+      <button class="info__btn"></button>
+    </div>
+    <div class="box"></div>
+    <div id="map"></div>
+  </body>
+</html>

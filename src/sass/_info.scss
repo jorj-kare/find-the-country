@@ -1,0 +1,178 @@
+@use "./variables" as *;
+@use "./animations" as *;
+@use "./mixins" as *;
+
+.info {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  z-index: 5;
+
+  &__btn {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    width: 4rem;
+    height: 3rem;
+    background: $color-purple-light;
+    border:none;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    transition: all .5s;
+    &:hover{
+      background: $color-purple-dark;
+      transform: translateX(1rem);
+    }
+    @include media($media-xSmall){
+     width: 3rem;
+     height: 2rem;
+    }
+  }
+  &__text{
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    color:$color-blue;
+    @include media($media-xSmall){
+      font-size: 1.8rem ;
+      letter-spacing: .1rem;
+    }
+  }
+  &__timer{
+    color: $color-purple-light;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-top: 1rem;
+    padding: 1rem 5rem;
+    background-color: $color-white;
+    border: 1px solid $color-blue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include media($media-xSmall){
+      padding: 1rem ;
+    }
+  }
+}
+
+.msg {
+  display: flex;
+  position: absolute;
+  font-size: 4rem;
+  transform: translateX(-50%);
+  animation: fly 3s 1 ease-in-out;
+  z-index: 1;
+
+
+
+}
+.win {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  letter-spacing: 0.5rem;
+  transform: translate(-50%);
+  z-index: 1;
+  
+  h1 {
+    margin: 0;
+    padding: 0 2rem;
+    font-size: calc(2rem + 5vw);
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: $shadow-color-primary;
+    animation: shadows 1.5s ease-in infinite, move 1.5s ease-in infinite;
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+    6px 6px 0 $shadow-color-tertiary, 9px 9px $shadow-color-quaternary,
+    12px 12px 0 $shadow-color-quinary;
+    
+    background: linear-gradient(
+      40deg,
+      $shadow-color-primary,
+      $shadow-color-tertiary,
+      $shadow-color-quaternary,
+      $shadow-color-quinary,
+      $shadow-color-secondary
+    );
+    background: -webkit-linear-gradient(
+      40deg,
+      $shadow-color-primary,
+      $shadow-color-tertiary,
+      $shadow-color-quaternary,
+      $shadow-color-quinary,
+      $shadow-color-secondary
+    );
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    @include media($media-xSmall){
+      font-size: calc(2rem + 3.3vw);
+      
+    }
+   
+  }
+
+ 
+}
+
+.btn-audio {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  background-color:rgba(79, 240, 235, 0.738);
+  border: 1px solid $color-blue;
+  border-radius: 50px;
+  font-size: 2rem;
+  z-index: 10;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(0.95);
+    border: transparent;
+  }
+  &:hover:after {
+    visibility: visible;
+    animation: btnHooverAnimation 0.6s 1 forwards;
+  }
+
+  &:after {
+    content: "";
+    visibility: hidden;
+    position: absolute;
+    inset: 0;
+    border: 1 solid $color-blue;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50px;
+    @include media($media-xSmall){
+      width: 3rem;
+      height: 3rem;
+      
+     }
+    
+  }
+  @include media($media-xSmall){
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.7rem;
+   }
+}

@@ -1,0 +1,99 @@
+@use "./variables" as *;
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary;
+  }
+  20% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+      6px 6px 0 $shadow-color-tertiary;
+  }
+  30% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+      6px 6px 0 $shadow-color-tertiary, 9px 9px $shadow-color-quaternary;
+  }
+  40% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+      6px 6px 0 $shadow-color-tertiary, 9px 9px $shadow-color-quaternary,
+      12px 12px 0 $shadow-color-quinary;
+  }
+  50% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+      6px 6px 0 $shadow-color-tertiary, 9px 9px $shadow-color-quaternary,
+      12px 12px 0 $shadow-color-quinary;
+  }
+  60% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+      6px 6px 0 $shadow-color-tertiary, 9px 9px $shadow-color-quaternary,
+      12px 12px 0 $shadow-color-quinary;
+  }
+  70% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+      6px 6px 0 $shadow-color-tertiary, 9px 9px $shadow-color-quaternary;
+  }
+  80% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary,
+      6px 6px 0 $shadow-color-tertiary;
+  }
+  90% {
+    text-shadow: 3px 3px 0 $shadow-color-secondary;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+@keyframes fly {
+    50% {
+      top: -3rem;
+      opacity: 0.5;
+    }
+    100% {
+      top: -6rem;
+      opacity: 0;
+    }
+  }
+
+  @keyframes btnHooverAnimation {
+    0%{
+     
+      transform: scale(1.2);
+  
+    }
+    100%{
+      opacity: 0;
+      transform: scale(1.4);
+    }
+   }
+
+   @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

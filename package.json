@@ -1,0 +1,26 @@
+{
+  "name": "find-the-country",
+  "version": "1.0.0",
+  "description": "Geography game",
+  "main": "index.js",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "start": "serve",
+    "build": "parcel build index.html ",
+    "watch-sass": "sass --watch src/sass/main.scss src/css/main.css",
+    "dev": "npm run start & npm run watch-sass"
+  },
+  "author": "geoKare",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.6.2",
+    "sass": "^1.54.0"
+  },
+  "dependencies": {
+    "mapbox-gl": "^2.9.2",
+    "serve": "^14.0.1",
+    "simplify-geojson": "^1.0.5"
+  }
+}
