@@ -49,6 +49,8 @@ const failSounds = [
 ];
 const playRandomSound = async (audioArray, audio) => {
   try {
+    console.log(audio.volume);
+
     audio.src = audioArray[generateRandomNumber(0, audioArray.length - 1)];
 
     audio.play();
@@ -110,8 +112,6 @@ export function countryOnClick(map, countriesData, audio) {
           timer = startTimer(timerEl);
         }, 2000);
       } else {
-        console.log(l.id);
-
         if (
           l.id === "admin-0-boundary-bg" ||
           l.id === "admin-0-boundary" ||

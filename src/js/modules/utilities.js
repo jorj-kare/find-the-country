@@ -26,22 +26,19 @@ const errorMsgs = [
   "💩",
 ];
 
-export const toggleAudio=(audio)=>{
+export const toggleAudio = (audio) => {
   const btn = document.querySelector(".btn-audio");
-  if(audio.volume === 0 ) {
-    audio.volume = 1
+
+  if (audio.volume === 0) {
+    audio.volume = 1;
     btn.textContent = "🔊";
-    btn.removeAttribute("style")
-  
-  }else{
-    audio.volume= 0
+    btn.style.backgroundColor = " rgba(205, 79, 240, 0.568)";
+  } else {
+    audio.volume = 0;
     btn.textContent = "🔇";
-    btn.style.backgroundColor = " rgba(205, 79, 240, 0.568)"
-    
+    btn.removeAttribute("style");
   }
-
-
-}
+};
 
 export const generateRandomNumber = (min, max) =>
   Math.floor(Math.random() * (max - min));

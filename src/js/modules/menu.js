@@ -30,13 +30,15 @@ export function menuBtnOnHoverOut(e) {
 // For small devices where hoover does not apply
 export const checkMediaQuery = (map, e) => {
   const mediaQuery = window.matchMedia("(max-width:600px)");
-
+  let interval;
   if (mediaQuery.matches) {
     btnsEl.forEach((btn) => {
       // Set random background color to the buttons
       btn.style.backgroundColor = generateRandomColor("light");
       // Zoom to the continent of choice
       btn.addEventListener("click", (e) => {
+        if (interval) clearInterval(interval);
+
         const coords = btn.dataset.coords.split(",");
         map.flyTo({
           center: coords,
@@ -51,7 +53,7 @@ export const checkMediaQuery = (map, e) => {
       });
     });
     // Creates animation effect
-    const interval = setInterval(() => {
+    interval = setInterval(() => {
       if (!document.querySelector(".menu")) return clearInterval(interval);
       const btn = btnsEl[generateRandomNumber(0, btnsEl.length - 1)];
       const coords = btn.dataset.coords.split(",");
