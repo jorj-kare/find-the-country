@@ -1,5 +1,5 @@
 # Find the country
 
-### A simple geography game created for learning purposes.
+### A simple geography game build with vanilla JS, created for learning purposes.
 
-You can find the game at : [https://find-the-country.herokuapp.com/](https://find-the-country.herokuapp.com/)
+### You can find an online version of the game at: https://find-the-country-js.vercel.app/
