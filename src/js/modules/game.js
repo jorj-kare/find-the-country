@@ -92,6 +92,7 @@ export function countryOnClick(map, countriesData, audio) {
   let randomColor = generateRandomColor("dark");
   const layers = map.getStyle().layers;
   if (!layers) return;
+  console.log(111);
   layers.forEach((l) =>
     map.on("click", l.id, (e) => {
       const clickedCountry = e.features[0].properties.ISO_A3;

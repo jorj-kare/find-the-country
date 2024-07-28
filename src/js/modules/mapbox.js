@@ -14,6 +14,8 @@ export function renderMap() {
 }
 
 export function renderPolygons(map, polygons) {
+  console.log(polygons);
+
   polygons.forEach((country) => {
     if (Object.keys(map.getStyle().sources).includes(country.properties.ISO_A3))
       return;

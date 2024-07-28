@@ -36,6 +36,7 @@ if (menu) {
     renderSpinner(menu);
     const continentName = e.target.value;
     const data = await getContinentPolygons(continentName);
+
     // For testing  purposes: limiting the number of thess countries
     // data.data.continent.countries.features.splice(
     //   1,
